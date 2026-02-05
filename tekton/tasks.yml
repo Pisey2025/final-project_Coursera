@@ -9,15 +9,17 @@ spec:
       script: |
         echo "Cleaning up workspace"
 
+
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: run-simple-interest-task
+  name: nose-test-task
 spec:
   steps:
-    - name: run-script
-      image: alpine
+    - name: run-nose-tests
+      image: python:3.9
       script: |
-        chmod +x simple-interest.sh
-        ./simple-interest.sh 1000 5 2
+        pip install nose
+        echo "Running unit tests using nose"
+        nosetests
