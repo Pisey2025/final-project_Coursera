@@ -1,3 +1,8 @@
+# CI/CD Final Project
+
+This repository demonstrates a complete CI/CD pipeline using GitHub Actions and OpenShift Tekton pipelines.
+The sample application used is a Simple Interest Calculator.
+
 # Simple Interest Calculator
 
 This project is a simple interest calculator that computes the simple interest based on the principal amount, rate of interest, and time period.
